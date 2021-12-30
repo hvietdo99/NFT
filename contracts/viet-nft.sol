@@ -5,13 +5,13 @@ import "@openzeppelin/contracts/utils/Strings.sol";
 
 contract BlockdevNFT is ERC721 {
     using Strings for uint256;
-    string public baseURI = "https://raw.githubusercontent.com/blockdev-vn/nft-demo/master/cards/";
+    string public baseURI = "https://raw.githubusercontent.com/hvietdo99/nft-demo/master/cards/";
 
     constructor() ERC721("NFT Demo", "NFTD") {
 
     }
 
-    // https://raw.githubusercontent.com/blockdev-vn/nft-demo/master/cards/1.json
+    // https://raw.githubusercontent.com/hvietdo99/nft-demo/master/cards/1.json
     function tokenURI(uint256 tokenId) public view virtual override returns (string memory) {
         require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
 
